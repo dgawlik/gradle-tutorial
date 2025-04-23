@@ -1,0 +1,22 @@
+
+task dev(type: Exec) {
+  description = 'Run Vite in development mode'
+  commandLine 'npx', 'vite'
+}
+
+task build(type: Exec) {
+  description = 'Run TypeScript compiler and build Vite project'
+  commandLine 'sh', '-c', 'npx tsc && npx vite build'
+}
+
+task preview(type: Exec) {
+  description = 'Preview the Vite build'
+  commandLine 'npx', 'vite', 'preview'
+}
+
+task deploy(type: Copy) {
+  description = 'Deploy the frontend build to the backend dist directory'
+  dependsOn build
+  from 'dist'
+  into '../backend/dist'
+}

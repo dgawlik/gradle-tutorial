@@ -1,4 +1,4 @@
-rootProject.name = 'gradle-tutorial'
+rootProject.name = 'germanLearning'
 
-include 'library'
-include 'application'
+include 'backend'
+include 'frontend'

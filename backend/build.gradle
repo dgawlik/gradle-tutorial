@@ -1,0 +1,16 @@
+
+
+task build(type: Exec) {
+    description = 'Runs go build'
+    commandLine 'go', 'build'
+}
+
+task test(type: Exec) {
+    description = 'Runs go test'
+    commandLine 'go', 'test'
+}
+
+task run(type: Exec) {
+    description = 'Runs go run'
+    commandLine 'go', 'run', '.'
+}

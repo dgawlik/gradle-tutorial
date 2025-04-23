@@ -1,0 +1,30 @@
+{
+  "installation": {
+    "version": "20.8.0",
+    "plugins": {
+      "@nx/gradle": "20.8.0"
+    }
+  },
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "nxCloudId": "6807e9c67852681f6739c45c",
+  "plugins": [
+    {
+      "plugin": "@nx/gradle",
+      "options": {
+        "testTargetName": "test",
+        "classesTargetName": "classes",
+        "buildTargetName": "build",
+        "includeSubprojectsTasks": false
+      }
+    }
+  ],
+  "namedInputs": {
+    "default": [
+      "{projectRoot}/**/*"
+    ],
+    "production": [
+      "default",
+      "!{projectRoot}/src/test/**/*"
+    ]
+  }
+}
